@@ -20,7 +20,7 @@ The are a total three data files:
   
   **Correction**: *The [poster write up](https://github.com/washuvis/letsgamble/blob/master/VIS2019_write_up.pdf) included a typographic error. It states "We analyzed 406 participants' decisions over real monetary gains, resulting in 10,150 observations". However, there was a total of 405 participants with 25 observations each (405 x 25 = 10,150). 
 
-* Experiment 2: Decision-Making using the lottery game for the IEEE InfoVis Short Paper Submission **Let's Gamble: How a Poor Visualization Can Elicit Risky Behavior** Melanie Bancilhon, Zhengliang Liu, and Alvitta Ottley.
+* Experiment 2: Decision-Making using the lottery game for the IEEE InfoVis Short Paper Submission [**Let's Gamble: How a Poor Visualization Can Elicit Risky Behavior**](https://github.com/washuvis/letsgamble/blob/master/VIS2020_short_paper.pdf) Melanie Bancilhon, Zhengliang Liu, and Alvitta Ottley.
   * [Exp2.csv](https://github.com/washuvis/letsgamble/blob/master/data/Exp2.csv) (300 participants) 
 
 ## Stumili
