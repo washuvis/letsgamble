@@ -18,7 +18,7 @@ The are a total three data files:
   * Exp1-round1.csv (105 participants)
   * Exp1-round2.csv (300 participants)
   
-  **Paper Correction** The poster write up includeed a typographic error. It states "We analyzed 406 participants' decisions over real monetary gains, resulting in 10,150 observations". However, there was a total of 405 participants with 25 observations each (405 x 25 = 10,150). 
+  *Paper Correction: The poster write up includeed a typographic error. It states "We analyzed 406 participants' decisions over real monetary gains, resulting in 10,150 observations". However, there was a total of 405 participants with 25 observations each (405 x 25 = 10,150). *
 
 * Experiment 2: Decision-Making using the lottery game for the IEEE InfoVis Short Paper Submission **Let's Gamble: How a Poor Visualization Can Elicit Risky Behavior** Melanie Bancilhon, Zhengliang Liu, and Alvitta Ottley.
   * Exp2.csv (300 participants) 
