@@ -15,13 +15,13 @@ By measuring risk perception and observing decision-making, we showed that icon 
 ## Data
 The are a total three data files:
 * Experiment 1: Graphical Perception using the lottery game for the IEEE InfoVis 2019 Poster [**Icons are Best: Ranking  Visualizations for Proportion  Estimation.**](https://github.com/washuvis/letsgamble/blob/master/VIS2019_poster.pdf) Zhengliang Liu, Melanie Bancilhon, and Alvitta Ottley. The data were collected in two rounds and combined for the poster submission:
-  * Exp1-round1.csv (105 participants)
-  * Exp1-round2.csv (300 participants)
+  * [Exp1-round1.csv](https://github.com/washuvis/letsgamble/blob/master/data/Exp1-round1.csv) (105 participants)
+  * [Exp1-round2.csv](https://github.com/washuvis/letsgamble/blob/master/data/Exp1-round2.csv) (300 participants)
   
-  *Paper Correction: The poster write up includeed a typographic error. It states "We analyzed 406 participants' decisions over real monetary gains, resulting in 10,150 observations". However, there was a total of 405 participants with 25 observations each (405 x 25 = 10,150). *
+  **Correction**: *The [poster write up](https://github.com/washuvis/letsgamble/blob/master/VIS2019_write_up.pdf) included a typographic error. It states "We analyzed 406 participants' decisions over real monetary gains, resulting in 10,150 observations". However, there was a total of 405 participants with 25 observations each (405 x 25 = 10,150). 
 
 * Experiment 2: Decision-Making using the lottery game for the IEEE InfoVis Short Paper Submission **Let's Gamble: How a Poor Visualization Can Elicit Risky Behavior** Melanie Bancilhon, Zhengliang Liu, and Alvitta Ottley.
-  * Exp2.csv (300 participants) 
+  * [Exp2.csv](https://github.com/washuvis/letsgamble/blob/master/data/Exp2.csv) (300 participants) 
 
 ## Stumili
 The 5 visualization designs we used in the experiments can be found in [stimuli.pdf](https://washuvis.github.io/letsgamble/stimuli.pdf).
