@@ -7,7 +7,7 @@ This repo contains the experiment data, stimuli, and setup analysis scripts from
 Data visualizations are standard tools for assessing and communicating risks. However, it is not always clear which designs are optimal or how encoding choices might influence risk perception and decision-making. This project reports the findings of a large-scale gambling game that immersed participants in an environment where their actions impacted their bonuses. Our study participants chose to either enter a draw or receive a guaranteed amount of money based on a visualization that showed the likelihood of winning. For each experiment, participants played 25 lottery sheets and were eligible to win prizes of up to \$10. 
 * Experiment 1 focused on a proportion judgment task, where participants estimated the probability depicted by the visualization. Each participant was assigned one of five different types of widely used visualizations before entering their lottery choice. 
 
-*In Experiment 2, we removed the proportion judgment task to focus on the direct impact of visualization on lottery decisions. We also included a text condition for comparison and evaluation.
+* In Experiment 2, we removed the proportion judgment task to focus on the direct impact of visualization on lottery decisions. We also included a text condition for comparison and evaluation.
 
 By measuring risk perception and observing decision-making, we showed that icon arrays tended to elicit economically sound behavior. We also found that people were more likely to gamble when presented area proportioned triangle and circle designs. Using our results, we model risk perception and discuss how our findings can improve visualization selection.
 
