@@ -12,10 +12,10 @@ The are a total three data files:
 2. Experiment 2: Decision-Making using the lottery game.
   - Exp2.cvs (300 participants) 
 
-#Stumili
+# Stumili
 The 5 visualization designs we used in the experiments can be found in stimuli.pdf
 
-#Analysis
+# Analysis
 A script for the analyses can be found in analysis/.
 
 
