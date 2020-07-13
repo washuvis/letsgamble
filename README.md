@@ -19,12 +19,13 @@ The are a total three data files:
   * Exp1-round2.csv (300 participants)
 
 * Experiment 2: Decision-Making using the lottery game for the IEEE InfoVis Short Paper Submission **Let's Gamble: How a Poor Visualization Can Elicit Risky Behavior** Melanie Bancilhon, Zhengliang Liu, and Alvitta Ottley.
-  * Exp2.cvs (300 participants) 
+  * Exp2.csv (300 participants) 
 
 ## Stumili
 The 5 visualization designs we used in the experiments can be found in stimuli.pdf
 
 ## Analysis
-A script for the analyses can be found in analysis/.
+A script for the analyses can be found in [analysis/](https://washuvis.github.io/letsgamble/analysis/).
+* [Short Paper Script](https://washuvis.github.io/letsgamble/analysis/short_paper_analysis.html) 
 
 
