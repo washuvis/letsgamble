@@ -3,7 +3,7 @@
 This repo contains the experiment data, stimuli, and setup analysis scripts from our Let's Gamble project
 
 
-# Data
+## Data
 The are a total three data files:
 * Experiment 1: Graphical Perception using the lottery game. The data was collected in two rounds
   * Exp1-round1.csv (106 participants)
@@ -12,10 +12,10 @@ The are a total three data files:
 * Experiment 2: Decision-Making using the lottery game.
   * Exp2.cvs (300 participants) 
 
-# Stumili
+## Stumili
 The 5 visualization designs we used in the experiments can be found in stimuli.pdf
 
-# Analysis
+## Analysis
 A script for the analyses can be found in analysis/.
 
 
