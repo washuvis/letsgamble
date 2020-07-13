@@ -1,6 +1,6 @@
-# Let's Gamble: Uncovering the Impact of Visualization on Risk Perception and Decision-Making
+# Let's Gamble
 
-This repo contains the experiment data, stimuli, and setup analysis scripts from our Let's Gamble project.
+This repo contains the experiment data, stimuli, and setup analysis scripts from our Let's Gamble project. The goal is to *uncovering the impact of visualization on risk perception and decision-making*.
 
 **Synopsis**
 
