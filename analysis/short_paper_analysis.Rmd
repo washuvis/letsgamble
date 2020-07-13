@@ -1,0 +1,174 @@
+---
+title: "Let's Gamble"
+output: 
+    html_document:
+        toc: true
+        toc_float: true
+        collapsed: false
+---
+
+This document describes the analysis for the evaluation and modeling of a decision-making experiment described below. We investigate the relationship between visualization design, risk behavior and decision-making.
+
+### Required libraries
+
+```{r libraries}
+library(ggplot2)        # ggplot, stat_..., geom_..., etc
+library(magrittr)       # %>%, %<>%
+library(lmerTest)
+library(lme4)
+library(rcompanion)
+library("ggpubr")
+library(MASS)
+library(plyr)
+library(tidyverse)
+library(LaplacesDemon)
+library (betareg)
+library(scales)         # trans_format
+library(grid)
+library(gtable)
+library(dplyr)          # filter, rename, mutate, group_by, ungroup, ...
+library(coda)
+library(e1071)  #skewness
+library(forecast)
+library(lmtest)
+```
+
+## Data
+
+```{r data}
+data2 = read.csv("data_vislottery8-2019.csv")
+data2$abs_rrp = abs(data2$rrp)
+#convert p to a categorical variable
+data2$string_p = as.character(data2$p)
+data2$string_ev = as.character(data2$ev)
+```
+
+## Experiment II
+
+In Experiment II, each participant was randomly assigned a visualization condition drawn from the set {icon,pie,circle,triangle,bar,none} where none is a texrt condition. They completed 25 lottery sheets with probabilities drawn from the set p={.05,.1,.25,.5,.75,.9,.95}. Outcomes ranges from 50 to 150 points.\n
+We define Relative Risk Premia (RRP) as a measure of risk behavior. RRP>0 indicates risk aversion and RRP<0 indicates risk seeking behavior. 
+
+First, 
+i) we evaluate RRP across probability values and visualization conditions
+then 
+ii) we model evaluate if the differences in RRP are significant.
+Finally 
+iii) we create and evaluate models for RRP behavior
+
+
+### Analysis of RRP across probability values and visualization conditions
+
+```{r}
+ddply(data2, .(condition), summarize,  median_rrp=median(rrp))
+
+#grouped box plot RRP
+ggplot(data2, aes(x=string_p, y=rrp,group = interaction(string_p,condition))) +
+    geom_boxplot(color="black",width=0.9,lwd = 0.3,outlier.size = 0.4,outlier.color = "grey")+
+    facet_grid(.~condition)+
+    theme(axis.text.x = element_text(angle = 90, hjust = 1), legend.position="none") +
+    theme(axis.text=element_text(size=11))+
+    theme(panel.background = element_blank(),strip.background =element_rect(fill="white"),strip.text = element_text(size=13))+
+    labs(y="RRP",x="p")+
+    ylim(-10,3)
+
+```
+
+### Are the differences in RRP between the visualization conditions significantly different?
+
+```{r pairwise E1}
+print(kruskal.test(rrp~condition, data=data2)) 
+
+print(pairwise.wilcox.test(data2$rrp, data2$condition,p.adjust.method = "bonf"))
+#effect size
+epsilonSquared(x = data2$p,g = data2$rrp)
+
+list_df2 <- split(data2, data2$p) #list of 7 dataframes. One for each p
+
+i=0
+for (df in list_df2) {
+  i=i+1
+  df2=as.data.frame(df)
+  int= c(df2$p)
+  print(paste("=====",int[1],"======"))
+  print(kruskal.test(rrp~condition, data=df2)) 
+  print(pairwise.wilcox.test(df2$rrp, df2$condition,p.adjust.method = "bonf"))
+}
+```
+
+### RRP Regression Models
+
+#### RRP Linear Regression
+```{r linear RRP}
+list_df2 <- split(data2, data2$condition) #list of 7 dataframes. One for each condition
+
+for (df in list_df2){
+  df=as.data.frame(df)
+  print(paste("=====",df$condition[1],"======"))
+  m1= lm(rrp ~ p, data=df)
+  print("MODEL:")
+  print(m1)
+  print(summary(m1))
+  print("VARIANCE:")
+  print(summary(m1)$sigma) #the square root of the estimated variance of the random error
+  print("RSQUARED:")
+  print(summary(m1)$r.squared)
+  print("AIC:")
+  print(AIC(m1))
+  res1= resid(m1)
+  print("SKEWNESS:")
+  print(skewness(res1) ) 
+  print("KURTOSIS:")
+  print(kurtosis(res1)  )
+  print("DEVIANCE:")
+  print(deviance(m1))
+}
+```
+
+#### RRP Logarithmic Regression
+```{r logarithmic rrp}
+data2 %>%
+  ggplot(aes(x = p, y = rrp, group = condition, colour = condition)) +
+  #geom_point(size = 0.1, position = position_dodge2(width = 0.04),alpha=0.1) + 
+  stat_smooth(method="lm", se=TRUE, fill=NA,
+                formula=y ~ log(x),size=0.5
+)+
+  theme(
+  axis.text.x = element_text(size = 14),
+  axis.text.y = element_text(size = 14),
+  axis.title.x = element_text(size = 14),
+  axis.title.y = element_text(size = 14,angle=90))+
+  scale_color_manual(values=c("#e41a1c","#377eb8", "#4daf4a", "#984ea3", "#ff7f00", "black"))+
+  theme(panel.background = element_blank(),
+        axis.text=element_text(size=11),
+        legend.title = element_text(size = 11),
+        legend.text = element_text(size = 10))+
+  theme_set(theme(legend.key=element_blank() ))+
+  ylab("ln(rrp)")+
+  xlab("p")
+
+list_df2 <- split(data2, data2$condition) #list of 7 dataframes. One for each condition
+
+for (df in list_df2){
+  df=as.data.frame(df)
+  print(paste("=====",df$condition[1],"======"))
+  m1= lm(rrp ~ log(p), data=df,)
+  print("MODEL:")
+  print(m1)
+  print(summary(m1))
+  print("VARIANCE:")
+  print(summary(m1)$sigma) #the square root of the estimated variance of the random error
+  print("RSQUARED:")
+  print(summary(m1)$r.squared)
+  print("AIC:")
+  print(AIC(m1))
+  res1= resid(m1)
+  print("SKEWNESS:")
+  print(skewness(res1) ) 
+  print("KURTOSIS:")
+  print(kurtosis(res1)  )
+  print("DEVIANCE:")
+  print(deviance(m1))
+}
+```
+
+
