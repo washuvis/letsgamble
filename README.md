@@ -1,11 +1,11 @@
 # Let's Gamble
 
-This repo contains the experiment data, stimuli, and setup analysis scripts from our Let's Gamble project
+This repo contains the experiment data, stimuli, and setup analysis scripts from our Let's Gamble project.
 
 
 ## Data
 The are a total three data files:
-* Experiment 1: Graphical Perception using the lottery game for the IEEE InfoVis 2019 Poster **Icons  are  Best:  Ranking  Visualizations  for  Proportion  Esti-mation.**  Zhengliang Liu, Melanie Bancilhon, and Alvitta Ottley. The data was collected in two rounds:
+* Experiment 1: Graphical Perception using the lottery game for the IEEE InfoVis 2019 Poster **Icons are Best: Ranking  Visualizations for Proportion  Estimation.**  Zhengliang Liu, Melanie Bancilhon, and Alvitta Ottley. The data was collected in two rounds and combined for the poster submission:
   * Exp1-round1.csv (106 participants)
   * Exp1-round2.csv (300 participants)
 
