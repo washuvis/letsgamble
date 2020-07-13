@@ -22,7 +22,7 @@ The are a total three data files:
   * Exp2.csv (300 participants) 
 
 ## Stumili
-The 5 visualization designs we used in the experiments can be found in stimuli.pdf
+The 5 visualization designs we used in the experiments can be found in [stimuli.pdf](https://washuvis.github.io/letsgamble/stimuli.pdf).
 
 ## Analysis
 A script for the analyses can be found in [analysis/](https://washuvis.github.io/letsgamble/analysis/).
