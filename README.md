@@ -26,6 +26,6 @@ The 5 visualization designs we used in the experiments can be found in stimuli.p
 
 ## Analysis
 A script for the analyses can be found in [analysis/](https://washuvis.github.io/letsgamble/analysis/).
-* [Short Paper Script](https://washuvis.github.io/letsgamble/analysis/short_paper_analysis.html) 
+* [IEEE InfoVis Short Paper Submission Analysis Script](https://washuvis.github.io/letsgamble/analysis/short_paper_analysis.html) 
 
 
