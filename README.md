@@ -15,7 +15,7 @@ By measuring risk perception and observing decision-making, we showed that icon 
 ## Data
 The are a total three data files:
 * Experiment 1: Graphical Perception using the lottery game for the IEEE InfoVis 2019 Poster [**Icons are Best: Ranking  Visualizations for Proportion  Estimation.**](https://github.com/washuvis/letsgamble/blob/master/VIS2019_poster.pdf) Zhengliang Liu, Melanie Bancilhon, and Alvitta Ottley. The data were collected in two rounds and combined for the poster submission:
-  * Exp1-round1.csv (106 participants)
+  * Exp1-round1.csv (105 participants)
   * Exp1-round2.csv (300 participants)
 
 * Experiment 2: Decision-Making using the lottery game for the IEEE InfoVis Short Paper Submission **Let's Gamble: How a Poor Visualization Can Elicit Risky Behavior** Melanie Bancilhon, Zhengliang Liu, and Alvitta Ottley.
