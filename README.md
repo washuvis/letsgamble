@@ -29,7 +29,7 @@ The 5 visualization designs we used in the experiments can be found in [stimuli.
 ## Analysis
 A script for the analyses can be found in [analysis/](https://github.com/washuvis/letsgamble/blob/master/analysis/).
 
-[pairwise_rrp.png](https://github.com/washuvis/letsgamble/analysis/pairwise_rrp.png) visualizes the results of the pairwise comparisons using Wilcoxon rank sum test for RRP. Blue squares show significant difference and grey squares show no significant difference. 
+[pairwise_rrp.png](https://washuvis.github.io/letsgamble/analysis/pairwise_rrp.png)  visualizes the results of the pairwise comparisons using Wilcoxon rank sum test for RRP. Blue squares show significant difference and grey squares show no significant difference. 
 
 * [IEEE InfoVis Short Paper Submission Analysis Script](https://washuvis.github.io/letsgamble/analysis/short_paper_analysis.html) 
 
