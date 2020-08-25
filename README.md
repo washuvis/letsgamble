@@ -23,8 +23,9 @@ The are a total three data files:
 * Experiment 2: Decision-Making using the lottery game for the IEEE InfoVis Short Paper Submission [**Let's Gamble: How a Poor Visualization Can Elicit Risky Behavior**](https://github.com/washuvis/letsgamble/blob/master/VIS2020_short_paper.pdf) Melanie Bancilhon, Zhengliang Liu, and Alvitta Ottley.
   * [Exp2.csv](https://github.com/washuvis/letsgamble/blob/master/data/Exp2.csv) (300 participants) 
 
-For Experiment 1, participants were asked to give numerical estimates for the visualization designs before giving their lottery deicisions.
-In Experiment 2, participants were not asked to give a numerical estimate. They directly have their lottery decisions from the visualization design.
+In Experiment 1, participants were asked to give numerical estimates for the visualization designs before giving their lottery decisions.
+In Experiment 2, participants were not *asked* to give a numerical estimate. They directly selected their lottery preferences from the visualization design.
+
 ## Stumili
 The 5 visualization designs we used in the experiments can be found in [stimuli.pdf](https://washuvis.github.io/letsgamble/stimuli.pdf).
 
