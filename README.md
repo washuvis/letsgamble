@@ -24,7 +24,7 @@ The are a total three data files:
   * [Exp2.csv](https://github.com/washuvis/letsgamble/blob/master/data/Exp2.csv) (300 participants) 
 
 In Experiment 1, participants were asked to give numerical estimates for the visualization designs before giving their lottery decisions.
-In Experiment 2, participants were not *asked* to give a numerical estimate. They directly selected their lottery preferences from the visualization design.
+In Experiment 2, participants were **not** asked to give a numerical estimate. They directly selected their lottery preferences from the visualization design.
 
 ## Stumili
 The 5 visualization designs we used in the experiments can be found in [stimuli.pdf](https://washuvis.github.io/letsgamble/stimuli.pdf).
